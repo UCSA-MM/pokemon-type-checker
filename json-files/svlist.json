@@ -1,0 +1,254 @@
+{
+	"pokemonlist": [
+		{
+			"name": "Sprigatito",
+			"type1": "grass",
+			"type2": null
+		},
+		{
+			"name": "Floragato",
+			"type1": "grass",
+			"type2": null
+		},
+		{
+			"name": "Meowscarada",
+			"type1": "grass",
+			"type2": "dark"
+		},
+		{
+			"name": "Fuecoco",
+			"type1": "fire",
+			"type2": null
+		},
+		{
+			"name": "Crocalor",
+			"type1": "fire",
+			"type2": null
+		},
+		{
+			"name": "Skeledirge",
+			"type1": "fire",
+			"type2": "ghost"
+		},
+		{
+			"name": "Quaxly",
+			"type1": "water",
+			"type2": null
+		},
+		{
+			"name": "Quaxwell",
+			"type1": "water",
+			"type2": null
+		},
+		{
+			"name": "Quaquaval",
+			"type1": "water",
+			"type2": "fighting"
+		},
+		{
+			"name": "Lechonk",
+			"type1": "normal",
+			"type2": null
+		},
+		{
+			"name": "Oinkologne",
+			"type1": "normal",
+			"type2": null
+		},
+		{
+			"name": "Tarountula",
+			"type1": "bug",
+			"type2": null
+		},
+		{
+			"name": "Spidops",
+			"type1": "bug",
+			"type2": null
+		},
+		{
+			"name": "Nymble",
+			"type1": "bug",
+			"type2": null
+		},
+		{
+			"name": "Lokix",
+			"type1": "bug",
+			"type2": "dark"
+		},
+		{
+			"name": "Hoppip",
+			"type1": "grass",
+			"type2": "flying"
+		},
+		{
+			"name": "Skiploom",
+			"type1": "grass",
+			"type2": "flying"
+		},
+		{
+			"name": "Jumpluff",
+			"type1": "grass",
+			"type2": "flying"
+		},
+		{
+			"name": "Fletchling",
+			"type1": "normal",
+			"type2": "flying"
+		},
+		{
+			"name": "Fletchinder",
+			"type1": "fire",
+			"type2": "flying"
+		},
+		{
+			"name": "Talonflame",
+			"type1": "fire",
+			"type2": "flying"
+		},
+		{
+			"name": "Pawmi",
+			"type1": "electric",
+			"type2": null
+		},
+		{
+			"name": "Pawmo",
+			"type1": "electric",
+			"type2": "fighting"
+		},
+		{
+			"name": "Pawmot",
+			"type1": "electric",
+			"type2": "fighting"
+		},
+		{
+			"name": "Houndour",
+			"type1": "dark",
+			"type2": "fire"
+		},
+		{
+			"name": "Houndoom",
+			"type1": "dark",
+			"type2": "fire"
+		},
+		{
+			"name": "Yungoos",
+			"type1": "normal",
+			"type2": null
+		},
+		{
+			"name": "Gumshoos",
+			"type1": "normal",
+			"type2": null
+		},
+		{
+			"name": "Skwovet",
+			"type1": "normal",
+			"type2": null
+		},
+		{
+			"name": "Greedent",
+			"type1": "normal",
+			"type2": null
+		},
+		{
+			"name": "Sunkern",
+			"type1": "grass",
+			"type2": null
+		},
+		{
+			"name": "Sunflora",
+			"type1": "grass",
+			"type2": null
+		},
+		{
+			"name": "Kricketot",
+			"type1": "bug",
+			"type2": null
+		},
+		{
+			"name": "Kricketune",
+			"type1": "bug",
+			"type2": null
+		},
+		{
+			"name": "Scatterbug",
+			"type1": "bug"
+			"type2": null
+		},
+		{
+			"name": "Spewpa",
+			"type1": "bug",
+			"type2": null
+		},
+		{
+			"name": "Vivillon",
+			"type1": "bug",
+			"type2": "flying"
+		},
+		{
+			"name": "Combee",
+			"type1": "bug",
+			"type2": "flying"
+		},
+		{
+			"name": "Vespiqueen",
+			"type1": "bug",
+			"type2": "flying"
+		},
+		{
+			"name": "Rookidee",
+			"type1": "flying",
+			"type2": null
+		},
+		{
+			"name": "Corvisquire",
+			"type1": "flying",
+			"type2": null
+		},
+		{
+			"name": "Corviknight",
+			"type1": "flying",
+			"type2": "steel"
+		},
+		{
+			"name": "Happiny",
+			"type1": "normal",
+			"type2": null
+		},
+		{
+			"name": "Chansey",
+			"type1": "normal",
+			"type2": null
+		},
+		{
+			"name": "Blissey",
+			"type1": "normal",
+			"type2": null
+		},
+		{
+			"name": "Azurill",
+			"type1": "normal",
+			"type2": "fairy"
+		},
+		{
+			"name": "Marill",
+			"type1": "water",
+			"type2": "fairy"
+		},
+		{
+			"name": "Azumarill",
+			"type1": "water",
+			"type2": "fairy"
+		},
+		{
+			"name": "Surskit",
+			"type1": "bug",
+			"type2": "water"
+		},
+		{
+			"name": "Masquerain",
+			"type1": "bug",
+			"type2": "flying"
+		},
+	]
+}
