@@ -24,7 +24,7 @@ request.onreadystatechange = function(response)
 }
 
 request.open("GET", "json-files/version.json", true);
-reqyest.send();
+request.send();
 
 //directly taken from mdn docs
 function storageAvailable(type)
@@ -45,4 +45,5 @@ function storageAvailable(type)
 			storage.lenght !== 0
 		);
 	}
+
 }
