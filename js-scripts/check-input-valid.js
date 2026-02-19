@@ -14,8 +14,6 @@ pokemonInput4.addEventListener("change", function () {validatePokemon(pokemonInp
 pokemonInput5.addEventListener("change", function () {validatePokemon(pokemonInput5.value, 5)});
 pokemonInput6.addEventListener("change", function () {validatePokemon(pokemonInput6.value, 6)});
 
-//TODO
-//check for repeated mons and for times when updates are not necessary
 function validatePokemon(inputContent, slotNumber)
 {
     if(inputContent.length >= 3)
@@ -24,9 +22,13 @@ function validatePokemon(inputContent, slotNumber)
         {
             if(pokemon.name === inputContent)
             {
-                pokemonTeamArray[slotNumber - 1] = pokemon;
-                console.log(pokemonTeamArray);
-                break;
+
+                if(!pokemonTeamArray.includes(pokemon))
+                {
+                    pokemonTeamArray[slotNumber - 1] = pokemon;
+                    console.log(pokemonTeamArray);
+                    break;
+                }
             }
         }
     }
