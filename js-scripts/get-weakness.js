@@ -1,5 +1,3 @@
-import { normalize } from "node:path";
-
 const NORMAL_INDEX = 0;
 const FIRE_INDEX = 1;
 const WATER_INDEX = 2;
