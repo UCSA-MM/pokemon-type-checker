@@ -1,3 +1,5 @@
+import { normalize } from "node:path";
+
 const NORMAL_INDEX = 0;
 const FIRE_INDEX = 1;
 const WATER_INDEX = 2;
@@ -130,6 +132,72 @@ function getWeaknessArray(pokemon)
         weaknessArray[FIGHTING_INDEX] = weaknessArray[FIGHTING_INDEX] / 2;
         weaknessArray[GROUND_INDEX] = weaknessArray[GROUND_INDEX] / 2;
         weaknessArray[GRASS_INDEX] = weaknessArray[GRASS_INDEX] / 2;
+    }
+    if (type1 === "rock" || type2 === "rock")
+    {
+        weaknessArray[FIGHTING_INDEX] = weaknessArray[FIGHTING_INDEX] * 2;
+        weaknessArray[GROUND_INDEX] = weaknessArray[GROUND_INDEX] * 2;
+        weaknessArray[WATER_INDEX] = weaknessArray[WATER_INDEX] * 2;
+        weaknessArray[GRASS_INDEX] = weaknessArray[GRASS_INDEX] * 2;
+        weaknessArray[STEEL_INDEX] = weaknessArray[STEEL_INDEX] * 2;
+        weaknessArray[NORMAL_INDEX] = weaknessArray[NORMAL_INDEX] / 2;
+        weaknessArray[FLYING_INDEX] = weaknessArray[FLYING_INDEX] / 2;
+        weaknessArray[POISON_INDEX] = weaknessArray[POISON_INDEX] / 2;
+        weaknessArray[FIRE_INDEX] = weaknessArray[FIRE_INDEX] / 2;
+    }
+    if (type1 === "ghost" || type2 === "ghost")
+    {
+        weaknessArray[GHOST_INDEX] = weaknessArray[GHOST_INDEX] * 2;
+        weaknessArray[DARK_INDEX] = weaknessArray[DARK_INDEX] * 2;
+        weaknessArray[POISON_INDEX] = weaknessArray[POISON_INDEX] / 2;
+        weaknessArray[BUG_INDEX] = weaknessArray[BUG_INDEX] / 2;
+        weaknessArray[NORMAL_INDEX] = 0;
+        weaknessArray[FIGHTING_INDEX] = 0;
+    }
+    if (type1 === "dragon" || type2 === "dragon")
+    {
+        weaknessArray[ICE_INDEX] = weaknessArray[ICE_INDEX] * 2;
+        weaknessArray[DRAGON_INDEX] = weaknessArray[DRAGON_INDEX] * 2;
+        weaknessArray[FAIRY_INDEX] = weaknessArray[FAIRY_INDEX] * 2;
+        weaknessArray[FIRE_INDEX] = weaknessArray[FIRE_INDEX] / 2;
+        weaknessArray[WATER_INDEX] = weaknessArray[WATER_INDEX] / 2;
+        weaknessArray[GRASS_INDEX] = weaknessArray[GRASS_INDEX] / 2;
+        weaknessArray[ELECTRIC_INDEX] = weaknessArray[ELECTRIC_INDEX] / 2;
+    }
+    if (type1 === "dark" || type2 === "dark")
+    {
+        weaknessArray[FIGHTING_INDEX] = weaknessArray[FIGHTING_INDEX] * 2;
+        weaknessArray[BUG_INDEX] = weaknessArray[BUG_INDEX] * 2;
+        weaknessArray[FAIRY_INDEX] = weaknessArray[FAIRY_INDEX] * 2;
+        weaknessArray[GHOST_INDEX] = weaknessArray[GHOST_INDEX] / 2;
+        weaknessArray[DARK_INDEX] = weaknessArray[DARK_INDEX] / 2;
+        weaknessArray[PSYCHIC_INDEX] = 0;
+    }
+    if (type1 === "steel" || type2 === "steel")
+    {
+        weaknessArray[FIGHTING_INDEX] = weaknessArray[FIGHTING_INDEX] * 2;
+        weaknessArray[GROUND_INDEX] = weaknessArray[GROUND_INDEX] * 2;
+        weaknessArray[FIRE_INDEX] = weaknessArray[FIRE_INDEX] * 2;
+        weaknessArray[NORMAL_INDEX] = weaknessArray[NORMAL_INDEX] / 2;
+        weaknessArray[FLYING_INDEX] = weaknessArray[FLYING_INDEX] / 2;
+        weaknessArray[ROCK_INDEX] = weaknessArray[ROCK_INDEX] / 2;
+        weaknessArray[BUG_INDEX] = weaknessArray[BUG_INDEX] / 2;
+        weaknessArray[STEEL_INDEX] = weaknessArray[STEEL_INDEX] / 2;
+        weaknessArray[GRASS_INDEX] = weaknessArray[GRASS_INDEX] / 2;
+        weaknessArray[PSYCHIC_INDEX] = weaknessArray[PSYCHIC_INDEX] / 2;
+        weaknessArray[ICE_INDEX] = weaknessArray[ICE_INDEX] / 2;
+        weaknessArray[DRAGON_INDEX] = weaknessArray[DRAGON_INDEX] / 2;
+        weaknessArray[FAIRY_INDEX] = weaknessArray[FAIRY_INDEX] / 2;
+        weaknessArray[POISON_INDEX] = 0;
+    }
+    if (type1 === "fairy" || type2 === "fairy")
+    {
+        weaknessArray[POISON_INDEX] = weaknessArray[POISON_INDEX] * 2;
+        weaknessArray[STEEL_INDEX] = weaknessArray[STEEL_INDEX] * 2;
+        weaknessArray[FIGHTING_INDEX] = weaknessArray[FIGHTING_INDEX] / 2;
+        weaknessArray[BUG_INDEX] = weaknessArray[BUG_INDEX] / 2;
+        weaknessArray[DARK_INDEX] = weaknessArray[DARK_INDEX] / 2;
+        weaknessArray[DRAGON_INDEX] = 0;
     }
 
     return weaknessArray;
