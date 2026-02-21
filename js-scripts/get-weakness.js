@@ -30,7 +30,7 @@ function getTypeMult(pokemon)
     const type2 = pokemon.type2;
     if (type1 === "normal" || type2 === "normal")
     {
-        mult.fighting_mult /= 2;
+        mult.fighting_mult *= 2;
         mult.ghost_mult = 0;
     }
     if (type1 === "fire" || type2 === "fire")
