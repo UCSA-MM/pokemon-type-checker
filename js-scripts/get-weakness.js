@@ -80,7 +80,7 @@ function getTypeMult(pokemon)
         mult.rock_mult *= 2;
         mult.fire_mult *= 2;
         mult.steel_mult *= 2;
-        mult.ice_mult *= 2;
+        mult.ice_mult /= 2;
     }
     if (type1 === "fighting" || type2 === "fighting")
     {
