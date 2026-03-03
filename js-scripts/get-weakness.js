@@ -174,6 +174,7 @@ function getTypeMult(pokemon)
         mult.bug_mult *= 2;
         mult.fairy_mult *= 2;
         mult.dark_mult /= 2;
+        mult.ghost_mult /= 2;
         mult.psychic_mult = 0;
     }
     if (type1 === "steel" || type2 === "steel")
@@ -199,6 +200,7 @@ function getTypeMult(pokemon)
         mult.steel_mult *= 2;
         mult.fighting_mult /= 2;
         mult.dark_mult /= 2;
+        mult.bug_mult /= 2;
         mult.dragon_mult = 0;
     }
     return mult;

@@ -1,10 +1,3 @@
-// base idea:
-// get all the rows as objects (ugly but functional)
-// iterate the weakness of every pokemon inside the team array and update the table accordingly
-// the cells of the table should be in their HTMLCollection so i can access them
-
-// the function made here should be called in check-input-valid.js after the team array is updated
-
 const normal_row_cells = document.getElementById("normal-row").cells;
 const fire_row_cells = document.getElementById("fire-row").cells;
 const water_row_cells = document.getElementById("water-row").cells;
@@ -148,4 +141,3 @@ function modifyTableText(cell, add)
     }
     cell.innerHTML = text.toString();
 }
-

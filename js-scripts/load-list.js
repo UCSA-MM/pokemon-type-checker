@@ -1,5 +1,3 @@
-export { data };
-
 var request = new XMLHttpRequest();
 var data;
 window.pokemonDatalist = document.getElementById("pokemon-name-datalist");
@@ -9,6 +7,7 @@ request.onreadystatechange = function(response)
     if (request.readyState === 4 && request.status === 200)
     {
         data = JSON.parse(request.responseText);
+        console.log(data);
         data.pokemonlist.forEach(function(pokemon)
         {
             var option = document.createElement("option");

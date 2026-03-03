@@ -1,8 +1,5 @@
-import { expect, test } from "vitest"
-import { TeamArray as pokemonTeamArray, validatePokemon} from "../check-input-valid.js";
 
-test("fill-team-test-name", () => {
-    pokemonTeamArray[0] = null;
+function fillTeamTestName() {
     pokemonTeamArray[1] = null;
     pokemonTeamArray[2] = null;
     pokemonTeamArray[3] = null;
@@ -28,9 +25,11 @@ test("fill-team-test-name", () => {
     const res6 = pokemonTeamArray[5].name === test6;
     const result = res1 && res2 && res3 && res4 && res5 && res6;
     
-    expect(result).toBe(true);
-});
-test("fill-team-test-type", () => {
+    if (result === true) console.log("fillTeamTestName ok\n");
+    else console.log("fillTeamTestName fail\n");
+};
+
+function fillTeamTestType() {
     pokemonTeamArray = [null, null, null, null, null, null];
     const test1 = "Volcarona";
     const test2 = "Fuecoco";
@@ -63,9 +62,11 @@ test("fill-team-test-type", () => {
     const res62 = pokemonTeamArray[5].type2 === "fire";
     const res6 = res61 && res62;
     const result = res1 && res2 && res3 && res4 && res5 && res6;
-    assert.equal(result, true, "Error in type insertion ini pokemonTeamArray");
-});
-test("test-duplicate-elements", () => {
+    if (result === true) console.log("fillTeamTestType ok");
+    else console.log("fillTeamTestType fail");
+};
+
+function testDuplicateElements() {
     pokemonTeamArray = [null, null, null, null, null, null];
     const test1 = "Ditto";
     validatePokemon(test1, 1);
@@ -84,10 +85,12 @@ test("test-duplicate-elements", () => {
     const res5 = pokemonTeamArray[4] === null;
     const res6 = pokemonTeamArray[5] === null;
     const result = res1 && res2 && res3 && res4 && res5 && res6;
-    assert.equal(result, true, "Error: insertion of duplicate elements in pokemonTeamArray");
+    if (result === true) console.log("testDuplicateElements ok");
+    else console.log("testDuplicateElements fail");
     //this error message can be wrong in case what fails is the first element but if the error message gets thrown it will be checked regardless so it will be noticed
-});
-test("test-wrong-names", () => {
+};
+
+function testWrongNames() {
     pokemonTeamArray = [null, null, null, null, null, null];
     const test1 = "Pichaku";
     const test2 = "Puchiko";
@@ -107,12 +110,13 @@ test("test-wrong-names", () => {
     const res4 = pokemonTeamArray[3] === null;
     const res5 = pokemonTeamArray[4] === null;
     const res6 = pokemonTeamArray[5] === null;
-    const result = res1 & res2 & res3 & res4 & res5 & res6;
-    assert.equal(result, true, "Error: insertion of wrong values");
-});
+    const result = res1 && res2 && res3 && res4 && res5 && res6;
+    if (result === true) console.log("testWrongNames ok");
+    else console.log("testWrongNames fail");
+};
 //this was supposed to be misspelled names but ironically i am not sure of its spelling right now and i don't want to look it up
 
-test("test-types-1", () => {
+function testTypes1() {
     const normal = {type1: "normal", type2: null};
     const fire = {type1: "fire", type2: null};
     const water = {type1: "water", type2: null};
@@ -171,6 +175,7 @@ test("test-types-1", () => {
         normal_res.steel_mult === 1 &&
         normal_res.fairy_mult === 1
     );
+    console.log("normal1 " + normal_ans);
     const fire_ans = (
         fire_res.normal_mult === 1 &&
         fire_res.fire_mult === 0.5 &&
@@ -191,6 +196,7 @@ test("test-types-1", () => {
         fire_res.steel_mult === 0.5 &&
         fire_res.fairy_mult === 0.5
     );
+    console.log("fire1 " + fire_ans);
     const water_ans = (
         water_res.normal_mult === 1 &&
         water_res.fire_mult === 0.5 &&
@@ -211,6 +217,7 @@ test("test-types-1", () => {
         water_res.steel_mult === 0.5 &&
         water_res.fairy_mult === 1
     );
+    console.log("water1 " + water_ans);
     const electric_ans = (
         electric_res.normal_mult === 1 &&
         electric_res.fire_mult === 1 &&
@@ -231,6 +238,7 @@ test("test-types-1", () => {
         electric_res.steel_mult === 0.5 &&
         electric_res.fairy_mult === 1
     );
+    console.log("electric1 " + electric_ans);
     const grass_ans = (
         grass_res.normal_mult === 1 &&
         grass_res.fire_mult === 2 &&
@@ -251,6 +259,7 @@ test("test-types-1", () => {
         grass_res.steel_mult === 1 &&
         grass_res.fairy_mult === 1
     );
+    console.log("grass1 " + grass_ans);
     const ice_ans = (
         ice_res.normal_mult === 1 &&
         ice_res.fire_mult === 2 &&
@@ -271,12 +280,13 @@ test("test-types-1", () => {
         ice_res.steel_mult === 2 &&
         ice_res.fairy_mult === 1
     );
+    console.log("ice1 " + ice_ans);
     const fighting_ans = (
         fighting_res.normal_mult === 1 &&
         fighting_res.fire_mult === 1 &&
         fighting_res.water_mult === 1 &&
         fighting_res.electric_mult === 1 &&
-        fighting_res.grass_res === 1 &&
+        fighting_res.grass_mult === 1 &&
         fighting_res.ice_mult === 1 &&
         fighting_res.fighting_mult === 1 &&
         fighting_res.poison_mult === 1 &&
@@ -291,6 +301,7 @@ test("test-types-1", () => {
         fighting_res.steel_mult === 1 &&
         fighting_res.fairy_mult === 2
     );
+    console.log("fighting1 " + fighting_ans);
     const poison_ans = (
         poison_res.normal_mult === 1 &&
         poison_res.fire_mult === 1 &&
@@ -311,6 +322,7 @@ test("test-types-1", () => {
         poison_res.steel_mult === 1 &&
         poison_res.fairy_mult === 0.5
     );
+    console.log("poison1 " + poison_ans);
     const ground_ans = (
         ground_res.normal_mult === 1 &&
         ground_res.fire_mult === 1 &&
@@ -331,6 +343,7 @@ test("test-types-1", () => {
         ground_res.steel_mult === 1 &&
         ground_res.fairy_mult === 1
     );
+    console.log("ground1 " + ground_ans);
     const flying_ans = (
         flying_res.normal_mult === 1 &&
         flying_res.fire_mult === 1 &&
@@ -351,6 +364,7 @@ test("test-types-1", () => {
         flying_res.steel_mult === 1 &&
         flying_res.fairy_mult === 1
     );
+    console.log("flying1 " + flying_ans);
     const psychic_ans = (
         psychic_res.normal_mult === 1 &&
         psychic_res.fire_mult === 1 &&
@@ -371,6 +385,7 @@ test("test-types-1", () => {
         psychic_res.steel_mult === 1 &&
         psychic_res.fairy_mult === 1
     );
+    console.log("psychic1 " + psychic_ans);
     const bug_ans = (
         bug_res.normal_mult === 1 &&
         bug_res.fire_mult === 2 &&
@@ -391,6 +406,7 @@ test("test-types-1", () => {
         bug_res.steel_mult === 1 &&
         bug_res.fairy_mult === 1
     );
+    console.log("bug1 " + bug_ans);
     const rock_ans = (
         rock_res.normal_mult === 0.5 &&
         rock_res.fire_mult === 0.5 &&
@@ -401,7 +417,7 @@ test("test-types-1", () => {
         rock_res.fighting_mult === 2 &&
         rock_res.poison_mult === 0.5 &&
         rock_res.bug_mult === 1 &&
-        rock_res.ground_mult === 1 &&
+        rock_res.ground_mult === 2 &&
         rock_res.flying_mult === 0.5 &&
         rock_res.psychic_mult === 1 &&
         rock_res.rock_mult === 1 &&
@@ -411,6 +427,7 @@ test("test-types-1", () => {
         rock_res.steel_mult === 2 &&
         rock_res.fairy_mult === 1
     );
+    console.log("rock1 " + rock_ans);
     const ghost_ans = (
         ghost_res.normal_mult === 0 &&
         ghost_res.fire_mult === 1 &&
@@ -431,6 +448,7 @@ test("test-types-1", () => {
         ghost_res.steel_mult === 1 &&
         ghost_res.fairy_mult === 1
     );
+    console.log("ghost1 " + ghost_ans);
     const dragon_ans = (
         dragon_res.normal_mult === 1 &&
         dragon_res.fire_mult === 0.5 &&
@@ -451,6 +469,7 @@ test("test-types-1", () => {
         dragon_res.steel_mult ===1 &&
         dragon_res.fairy_mult === 2
     );
+    console.log("dragon1 " + dragon_ans);
     const dark_ans = (
         dark_res.normal_mult === 1 &&
         dark_res.fire_mult === 1 &&
@@ -464,13 +483,14 @@ test("test-types-1", () => {
         dark_res.ground_mult === 1 &&
         dark_res.flying_mult === 1 &&
         dark_res.psychic_mult === 0 &&
-        dark_res.rock_mult === 0 &&
-        dark_res.ghost_mult === 1 &&
+        dark_res.rock_mult === 1 &&
+        dark_res.ghost_mult === 0.5 &&
         dark_res.dragon_mult === 1 &&
         dark_res.dark_mult === 0.5 &&
         dark_res.steel_mult === 1 &&
         dark_res.fairy_mult === 2
     );
+    console.log("dark1 " + dark_ans);
     const steel_ans = (
         steel_res.normal_mult === 0.5 &&
         steel_res.fire_mult === 2 &&
@@ -482,7 +502,7 @@ test("test-types-1", () => {
         steel_res.poison_mult === 0 &&
         steel_res.bug_mult === 0.5 &&
         steel_res.ground_mult === 2 &&
-        steel_res.flying_mult === 1 &&
+        steel_res.flying_mult === 0.5 &&
         steel_res.psychic_mult === 0.5 &&
         steel_res.rock_mult === 0.5 &&
         steel_res.ghost_mult === 1 &&
@@ -491,6 +511,7 @@ test("test-types-1", () => {
         steel_res.steel_mult === 0.5 &&
         steel_res.fairy_mult === 0.5
     );
+    console.log("steel1 " + steel_ans);
     const fairy_ans = (
         fairy_res.normal_mult === 1 &&
         fairy_res.fire_mult === 1 &&
@@ -511,7 +532,17 @@ test("test-types-1", () => {
         fairy_res.steel_mult === 2 &&
         fairy_res.fairy_mult === 1
     );
+    console.log("fairy1 " + fairy_ans);
 
     const result = (normal_ans && fire_ans && water_ans && electric_ans && grass_ans && ice_ans && fighting_ans && poison_ans && ground_ans && flying_ans && psychic_ans && bug_ans && rock_ans && ghost_ans && dragon_ans && dark_ans && steel_ans && fairy_ans);
-    assert.equal(result, true, "Error: wrong typechart for type 1");
-})
+    if (result === true) console.log("testTypes1 ok");
+    else console.log("testTypes1 fail");
+}
+
+function TEST() {
+    fillTeamTestName();
+    fillTeamTestType();
+    testDuplicateElements();
+    testWrongNames();
+    testTypes1();
+}

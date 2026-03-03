@@ -16,7 +16,7 @@ pokemonInput6.addEventListener("change", function () {validatePokemon(pokemonInp
 
 function validatePokemon(inputContent, slotNumber)
 {
-    if(inputContent.length >= 3)
+    if(data !== undefined)
     {
         for(const pokemon of data.pokemonlist)
         {
@@ -38,6 +38,3 @@ function validatePokemon(inputContent, slotNumber)
         updateTable();
     }
 }
-
-export var TeamArray = pokemonTeamArray;
-export { validatePokemon };
