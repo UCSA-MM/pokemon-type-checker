@@ -38,3 +38,6 @@ function validatePokemon(inputContent, slotNumber)
         updateTable();
     }
 }
+
+export var TeamArray = pokemonTeamArray;
+export { validatePokemon };

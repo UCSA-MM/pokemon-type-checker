@@ -1,18 +1,5 @@
-import test from "node:test";
-import assert from "node:assert/strict";
-
-const options = {
-  resources: 'usable',
-  runScripts: 'dangerously',
-};
-import jsdom from "jsdom";
-const { JSDOM } = jsdom;
-const dom = await JSDOM.fromFile("../../index.html", options).then(dom => {return dom;});
-const { window } = dom.window;
-const { document } = dom.window.document;
-
-import { pokemonTeamArray } from "../check-input-valid.js";
-
+import { expect, test } from "vitest"
+import { TeamArray as pokemonTeamArray, validatePokemon} from "../check-input-valid.js";
 
 test("fill-team-test-name", () => {
     pokemonTeamArray[0] = null;
@@ -40,7 +27,8 @@ test("fill-team-test-name", () => {
     const res5 = pokemonTeamArray[4].name === test5;
     const res6 = pokemonTeamArray[5].name === test6;
     const result = res1 && res2 && res3 && res4 && res5 && res6;
-    assert.equal(result, true, "Error in name insertion in pokemonTeamArray");
+    
+    expect(result).toBe(true);
 });
 test("fill-team-test-type", () => {
     pokemonTeamArray = [null, null, null, null, null, null];
